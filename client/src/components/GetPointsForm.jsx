@@ -9,7 +9,7 @@ export default function GetPointsForm({onResult}) {
         const url = `/receipts/${receiptId}/points`;
         try {
             const res = await fetch(url, {method:'GET'});
-            if (!res.ok) throw new Error(`Error: ${response.statusText}`);
+            if (!res.ok) throw new Error(`Error: ${res.statusText}`);
 
             const data = await res.json();
             onResult({data});

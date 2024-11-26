@@ -6,14 +6,14 @@ export default function ProcessReceiptForm({onResult}) {
 
     const handleSubmit = async(e) => {
         e.preventDefault();
-        const url = '/receipt/process';
+        const url = '/receipts/process';
         try {
             const res = await fetch(url, {
                 method: "POST",
                 headers: {"Content-Type": "application/json"},
                 body: receipt
             });
-            if (!res.ok) throw new Error(`Error: ${response.statusText}`);
+            if (!res.ok) throw new Error(`Error: ${res.statusText}`);
             const data = await res.json();
             onResult({data});
         } catch (error) {
