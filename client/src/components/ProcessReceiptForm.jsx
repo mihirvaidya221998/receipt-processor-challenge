@@ -6,7 +6,7 @@ export default function ProcessReceiptForm({onResult}) {
 
     const handleSubmit = async(e) => {
         e.preventDefault();
-        const url = '/receipts/process';
+        const url = `/receipts/process`;
         try {
             const res = await fetch(url, {
                 method: "POST",

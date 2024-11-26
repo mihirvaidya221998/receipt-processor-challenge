@@ -6,8 +6,9 @@ export default defineConfig({
   server:{
     proxy: {
       '/receipts': {
-        target: 'http://localhost:3000',
+        target: 'http://backend:3000',
         secure: false,
+        changeOrigin: true
       }
     }
   },
