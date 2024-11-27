@@ -26,13 +26,13 @@ cd receipt-processor-challenge
 1. Build the Docker Images. In the project root directory, run:
 
 ```text
-docker-compose build
+docker compose build
 ```
 
 2. Run the Containers. Start the application using:
 
 ```text
-docker-compose up
+docker compose up
 ```
 
 3. Access the Application
@@ -43,7 +43,7 @@ docker-compose up
 4. Stop the Containers. When done testing, stop the containers:
 
 ```text
-docker-compose down
+docker compose down
 ```
 
 ---
